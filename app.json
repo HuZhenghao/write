@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/desktop/desktop",
     "pages/write/write",
     "pages/index/index",
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#1ec7aa",
+    "navigationBarBackgroundColor": "#06c1ae",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   }
