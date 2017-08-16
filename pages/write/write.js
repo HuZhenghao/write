@@ -83,6 +83,23 @@ Page({
   onShareAppMessage: function () {
 
   },
+  reWrite:function(){
+    var that = this;
+    if (!this.data.quickClick) { return false }
+    this.setData({
+      quickClick: false
+    })
+    for (let i = timeout; i < timeout + 3500; i++) {
+      clearTimeout(i);
+    }
+    setTimeout(function () {
+      that.setData({
+        quickClick: true
+      })
+    }, 1000)
+    this.drawFrame(this.data.cur_play);
+    this.fill(this.data.cur_play);
+  },
   changeWord: function (e) {
     var that = this;
     if(!this.data.quickClick){return false}
@@ -179,7 +196,8 @@ Page({
     // interval = setInterval(function () {
     // 填充汉字
     ctx.setFillStyle('black');
-    ctx.setLineWidth(1.5);
+    ctx.setLineWidth(2);
+    ctx.setLineCap('round');
     timeout = setTimeout(function(){},100);
     for (let line in that.data.words[index].bishun) {
       setTimeout(function () {

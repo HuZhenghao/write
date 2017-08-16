@@ -1,6 +1,6 @@
 /* write.wxss */
 page{
-  background-color: #1ec7aa;
+  background-color: #6cd7ac;
 }
 .words-container{
   box-sizing: border-box;
@@ -30,7 +30,6 @@ page{
   height: 130rpx;
   padding: 20rpx 53rpx; 
   white-space: nowrap;
-  background-color: #1ec7aa;
 }
 .bg{
   position: absolute;
@@ -70,4 +69,35 @@ page{
   position: fixed;
   bottom: 0;
   left: 0;
+  height: 198rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: url(http://www.whtlkj.cn/write/image/bottom_bg.png)no-repeat;
+  background-size: cover;
+}
+.bottom-item{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  margin-top: 50rpx;
+}
+.bottom-item image{
+  width: 62rpx;
+  height: 62rpx;
+  margin-bottom: 10rpx;
+}
+.bottom-title{
+  position: fixed;
+  bottom: 144rpx;
+  left: 50%;
+  width: 372rpx;
+  height: 82rpx;
+  line-height: 82rpx;
+  text-align: center;
+  transform: translate(-50%,0);
+  background: url(http://www.whtlkj.cn/write/image/title.png)no-repeat;
+  background-size: contain;
 }
