@@ -1,0 +1,15 @@
+<!--write.wxml-->
+<view class="">
+  <scroll-view class="words-container" scroll-x>
+    <view class="words {{cur[index]}}" data-index="{{index}}" wx:for="{{words}}" bindtap="changeWord">{{item.name}}</view>
+  </scroll-view>
+  <scroll-view class="img-container" scroll-x>
+    <image bindload="imageLoad" class="word-img" mode="aspectFill" src="{{cur_img}}" style="width:{{images.width}}rpx;"></image>
+    <view class="bg"></view>
+  </scroll-view>
+  <view class="canvas-container">
+    <canvas class="canvas-bg" canvas-id="bg" />
+    <canvas class="canvas" canvas-id="word" />
+  </view>
+  <view class="bottom"></view>
+</view>
