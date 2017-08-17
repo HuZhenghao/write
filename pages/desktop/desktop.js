@@ -318,7 +318,7 @@ Page({
   /* 跳转到write页面 */
   toWriting(charArray) {
     wx.navigateTo({
-      url: '/pages/write/write?charArray',
+      url: `/pages/write/write?word=${charArray}`,
     })
   }
 })

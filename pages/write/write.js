@@ -1,6 +1,7 @@
 // write.js
 var interval;
 var timeout;
+var app = getApp();
 Page({
 
   /**
@@ -29,11 +30,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(options.word);
     this.drawFrame(this.data.cur_play);
     this.fill(this.data.cur_play);
     var ctxbg = wx.createCanvasContext("bg");
     ctxbg.drawImage("../../images/write/mi.png",0,0,300,300);
     ctxbg.draw();
+    app.write.getBishun("去",function(res){
+      console.log(JSON.parse(res.content).chinese.bihua)
+    })
   },
 
   /**
