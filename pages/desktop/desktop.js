@@ -28,6 +28,7 @@ Page({
     bookIndex: "",
     nodouble: true,
     backFromSearch: false,
+    charArray: [],
     //修改样式用的data
     isLoading: false,
     userInfo: {},
@@ -311,14 +312,15 @@ Page({
 
   /* 处理输入的文字 */
   splitToArray(event) {
-    let charArray = str.split("");
-    this.toWriting(charArray);
+    let str = event.detail.value;
+    let strArray = str.split("");
+    this.data.charArray = strArray;
   },
 
   /* 跳转到write页面 */
   toWriting(charArray) {
     wx.navigateTo({
-      url: '/pages/write/write?charArray',
+      url: `/pages/write/write?word=${this.data.charArray}`,
     })
   }
 })
