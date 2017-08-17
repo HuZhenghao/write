@@ -1,7 +1,7 @@
 <!--write.wxml-->
 <view class="">
   <scroll-view class="words-container" scroll-x>
-    <view class="words {{cur[index]}}" data-index="{{index}}" wx:for="{{words}}" bindtap="changeWord">{{item.name}}</view>
+    <view class="words {{cur[index]}}" data-index="{{index}}" wx:for="{{words_display}}" bindtap="changeWord">{{item}}</view>
   </scroll-view>
   <scroll-view class="img-container" scroll-x>
     <image bindload="imageLoad" class="word-img" mode="aspectFill" src="{{cur_img}}" style="width:{{images.width}}rpx;"></image>
