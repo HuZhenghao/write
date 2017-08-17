@@ -104,7 +104,17 @@ view {
   text-align: center;
 }
 .select{
-  background-color: #ccc;
+  position: relative;
+}
+.select::after{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 6rpx;
+  background: #1ec7aa;
 }
 
 .book-add-area-visibility {
