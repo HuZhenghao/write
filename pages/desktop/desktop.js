@@ -7,7 +7,16 @@ Page({
     {
       total_count: 1,
       count: 0,
-      list: []
+      list: [
+        {
+          "book_name": "标准实验教科书 语文 五年级下册",
+          "book_pic": "http://file.changdelao.net/upload/20170707/2017_07_07_163210579.jpg"
+        },
+        {
+          "book_name": "小学语文 一年级语文 上册",
+          "book_pic": "http://file.changdelao.net/upload/20170711/2017_07_11_142320385.jpg"
+        }
+      ]
     },
     readbook:
     {
@@ -315,6 +324,7 @@ Page({
     let str = event.detail.value;
     let strArray = str.split("");
     this.data.charArray = strArray;
+    console.log(this.data.charArray)
   },
 
   /* 跳转到write页面 */

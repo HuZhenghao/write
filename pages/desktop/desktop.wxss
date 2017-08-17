@@ -217,8 +217,12 @@ view {
 }
 
 /*输入文字  */
+.occupy_place{
+  width: 100%;
+  height: 102rpx;
+}
 .get_character{
-  margin: 122rpx 20rpx 20rpx 20rpx;
+  margin: 20rpx;
   padding: 15rpx 20rpx;
   width: calc(100% - 40rpx);
   height: 461rpx;
@@ -229,5 +233,6 @@ view {
 .get_character + button{
   width: calc(100% - 40rpx);
   height: 86rpx;
+  color: #eee;
   background-color: #1ec7aa;
 }

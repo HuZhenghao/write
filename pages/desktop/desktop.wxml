@@ -43,13 +43,14 @@
           </view>        
         </view>
       </view>
+      <block wx:if="{{selected[1]}}">
+       <view class="occupy_place"></view>
+        <form>
+          <textarea class="get_character" placeholder="请输入需要学习的汉字" bindinput="splitToArray"  />
+          <button form-type="reset" catchtap="toWriting">确认</button>
+        </form>
+      </block>
     </scroll-view>
   </block>
   <!--输入文字  -->
-  <block wx:if="{{selected[1]}}">
-    <form>
-      <textarea class="get_character" placeholder="请输入需要学习的汉字" bindinput="splitToArray"  />
-      <button form-type="reset" catchtap="toWriting">确认</button>
-    </form>
-  </block>
 </view>
