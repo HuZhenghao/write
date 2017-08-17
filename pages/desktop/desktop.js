@@ -32,7 +32,7 @@ Page({
     isLoading: false,
     userInfo: {},
     now_personNum: 129381,
-    selected: ["select", ""]
+    selected: ["", "select"]
   },
 
   //获取在线人数
@@ -306,5 +306,19 @@ Page({
   },
   selectCustom() {
     this.setData({ selected: ["", "select"] });
+  },
+
+
+  /* 处理输入的文字 */
+  splitToArray(event) {
+    let charArray = str.split("");
+    this.toWriting(charArray);
+  },
+
+  /* 跳转到write页面 */
+  toWriting(charArray) {
+    wx.navigateTo({
+      url: '/pages/write/write?charArray',
+    })
   }
 })

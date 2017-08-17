@@ -13,7 +13,7 @@
           <text class="f1">输入文字</text>
         </view>
       </view>
-      <view class="book-add-area-visibility">正在刷新</view>
+      <view class="book-add-area-visibility" wx:if="{{selected[0]}}">正在刷新</view>
 
       <!--没有书籍时提示添加书籍  -->
       <view class="{{font}} nobook_container" wx:if="{{book.total_count === 0}}">
@@ -44,7 +44,12 @@
         </view>
       </view>
     </scroll-view>
-    <!--输入文字  -->
-    <textarea class="get_character" placeholder="请输入需要学习的汉字" />
+  </block>
+  <!--输入文字  -->
+  <block wx:if="{{selected[1]}}">
+    <form>
+      <textarea class="get_character" placeholder="请输入需要学习的汉字" bindinput="splitToArray"  />
+      <button form-type="reset" catchtap="toWriting">确认</button>
+    </form>
   </block>
 </view>
