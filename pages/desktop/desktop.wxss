@@ -244,5 +244,6 @@ view {
   width: calc(100% - 40rpx);
   height: 86rpx;
   color: #eee;
+  line-height: 86rpx;
   background-color: #1ec7aa;
 }
