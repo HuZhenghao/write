@@ -1,5 +1,11 @@
 {
   "pages": [
+    "pages/desktop/desktop",
+    "pages/searchlist/searchlist",
+    "pages/nobook/nobook",
+    "pages/book/book",
+    "pages/template/template",
+    "pages/unit/unit",
     "pages/write/write",
     "pages/index/index",
     "pages/logs/logs"
